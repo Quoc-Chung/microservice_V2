@@ -1,0 +1,3 @@
+-  Chạy discovery-server
+-  Chạy user-service và order-service
+-  Chạy api-gateway
