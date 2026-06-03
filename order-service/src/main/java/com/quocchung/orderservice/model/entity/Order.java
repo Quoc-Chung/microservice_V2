@@ -1,5 +1,9 @@
 package com.quocchung.orderservice.model.entity;
+import com.quocchung.orderservice.utils.OrderStatus;
 import jakarta.persistence.*;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 import lombok.*;
 
 @Entity
@@ -17,5 +21,12 @@ public class Order {
 
   private String product;
 
-  private Double price;
+  @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+  private List<OrderItem> items = new ArrayList<>();
+
+  @Enumerated(EnumType.STRING)
+  private OrderStatus status;
+
+  private Double totalAmount;
+  private LocalDateTime orderDate;
 }

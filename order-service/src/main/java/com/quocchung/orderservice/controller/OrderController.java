@@ -1,10 +1,9 @@
 package com.quocchung.orderservice.controller;
-
-import com.quocchung.orderservice.client.UserClient;
-import com.quocchung.orderservice.model.dto.OrderResponse;
-import com.quocchung.orderservice.model.dto.OrderResponse.UserResponse;
+import com.quocchung.orderservice.model.dto.CreateOrderRequest;
+import com.quocchung.orderservice.model.dto.OrderCreateResponse;
 import com.quocchung.orderservice.model.entity.Order;
 import com.quocchung.orderservice.repository.OrderRepository;
+import com.quocchung.orderservice.service.OrderService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,11 +15,11 @@ import java.util.List;
 public class OrderController {
 
   private final OrderRepository orderRepository;
-  private final UserClient userClient;
+  private final OrderService orderService;
 
   @PostMapping
-  public Order createOrder(@RequestBody Order order) {
-    return orderRepository.save(order);
+  public OrderCreateResponse createOrder(@RequestBody CreateOrderRequest order) {
+    return orderService.createOrder(order) ;
   }
 
   @GetMapping
@@ -28,18 +27,4 @@ public class OrderController {
     return orderRepository.findAll();
   }
 
-  @GetMapping("/details/{order_id}")
-  public OrderResponse getOrder(@PathVariable(name = "order_id") Long orderId){
-     Order order = orderRepository.findById(orderId).orElseThrow(() -> new RuntimeException("Khong tim thay đơn hàng"));
-
-    UserResponse user = userClient.getUserResponse(order.getUserId());
-
-     return OrderResponse
-         .builder()
-         .id(order.getId())
-         .price(order.getPrice())
-         .product(order.getProduct())
-         .userResponse(user)
-         .build();
-  }
 }

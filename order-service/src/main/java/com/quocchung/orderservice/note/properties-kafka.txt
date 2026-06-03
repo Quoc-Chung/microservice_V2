@@ -1,0 +1,87 @@
+spring:
+  kafka:
+    consumer:
+      properties:
+        # Deserializer
+        spring.json.trusted.packages: "*"
+        spring.json.type.mapping: "orderCreatedEvent:com.quocchung.notificationservice.event.OrderCreatedEvent"
+        spring.json.add.type.headers: false
+        spring.json.use.type.headers: false  # không đọc __TypeId__ header
+
+        # Performance
+        max.poll.records: 500              # số record tối đa mỗi lần poll
+        max.poll.interval.ms: 300000       # timeout giữa 2 lần poll
+        session.timeout.ms: 30000          # timeout session với broker
+        heartbeat.interval.ms: 10000       # nhịp heartbeat
+        fetch.min.bytes: 1                 # min bytes mỗi lần fetch
+        fetch.max.wait.ms: 500             # max time chờ fetch
+
+
+
+spring:
+  kafka:
+    producer:
+      properties:
+        spring.json.add.type.headers: false  # không thêm __TypeId__ header
+
+        # Reliability
+        acks: all              # chờ tất cả replica xác nhận
+        retries: 3             # số lần retry nếu fail
+        retry.backoff.ms: 1000 # thời gian chờ giữa các retry
+
+        # Performance
+        batch.size: 16384      # kích thước batch (bytes)
+        linger.ms: 5           # chờ thêm để gom batch
+        buffer.memory: 33554432 # buffer memory (bytes)
+
+# Producer
+spring.json.add.type.headers: false
+
+# Consumer
+spring.json.trusted.packages: "*"
+spring.json.use.type.headers: false
+
+
+
+trusted.packages  =   Consumer cần deserialize JSON
+
+add.type.headers: false   = Producer - không muốn gửi kèm __TypeId__
+
+use.type.headers: false   = Consumer - không muốn đọc __TypeId__
+
+type.mapping   =  Map tên class khác nhau giữa các service
+
+acks: all  = Cần đảm bảo message không bị mất
+
+
+
+properties:
+  # Trust tất cả packages - dùng khi dev/test
+  spring.json.trusted.packages: "*"
+
+  # Trust 1 package cụ thể
+  spring.json.trusted.packages: "com.quocchung.orderservice.event"
+
+  # Trust nhiều package cụ thể - dùng khi production
+  spring.json.trusted.packages: "com.quocchung.orderservice.event, com.quocchung.notificationservice.event"
+===========================================================================================================
+Khi Kafka nhận message JSON, JsonDeserializer cần biết convert thành class nào.
+Nếu không kiểm soát → hacker có thể gửi message chứa class độc hại vào hệ thống.
+
+
+
+Kafka Message JSON  ──▶  JsonDeserializer  ──▶  Java Object
+                              │
+                         Phải check: class này có được tin tưởng không?
+
+
+# Không khai báo → lỗi
+# Caused by: java.lang.IllegalArgumentException:
+# The class 'com.quocchung.orderservice.event.OrderCreatedEvent' is not in the trusted packages
+
+# Trust tất cả
+spring.json.trusted.packages: "*"
+
+# Trust đúng package chứa event class
+spring.json.trusted.packages: "com.quocchung.orderservice.event"
+
