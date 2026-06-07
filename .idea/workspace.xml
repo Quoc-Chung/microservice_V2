@@ -4,61 +4,62 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64199200-800d-4694-a052-859035383fa4" name="Changes" comment="build base project javaspring boot">
-      <change afterPath="$PROJECT_DIR$/eureka-service/product-service/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-service/product-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-service/product-service/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-service/product-service/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-service/product-service/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-service/product-service/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-service/product-service/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-service/product-service/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-service/product-service/src/main/java/com/quocchung/productservice/ProductServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-service/product-service/src/main/java/com/quocchung/productservice/controller/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-service/product-service/src/main/java/com/quocchung/productservice/model/dto/ProductResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-service/product-service/src/main/java/com/quocchung/productservice/model/entity/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-service/product-service/src/main/java/com/quocchung/productservice/repository/ProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-service/product-service/src/main/java/com/quocchung/productservice/service/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-service/product-service/src/main/java/com/quocchung/productservice/service/impl/ProductServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-service/product-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-service/product-service/src/test/java/com/quocchung/productservice/ProductServiceApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kafka-docker/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/quocchung/notificationservice/NotificationServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/src/test/java/com/quocchung/notificationservice/NotificationServiceApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/quocchung/orderservice/client/ProductClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/quocchung/orderservice/config/KafkaProducerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/quocchung/orderservice/event/OrderCreatedEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/quocchung/orderservice/model/dto/CreateOrderRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/quocchung/orderservice/model/dto/OrderCreateResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/quocchung/orderservice/model/dto/OrderItemRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/quocchung/orderservice/model/dto/ProductResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/quocchung/orderservice/model/entity/OrderItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/quocchung/orderservice/note/properties-kafka.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/quocchung/orderservice/repository/OrderItemRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/quocchung/orderservice/service/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/quocchung/orderservice/service/impl/OrderServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/quocchung/orderservice/utils/OrderStatus.java" afterDir="false" />
+    <list default="true" id="c94e8f2a-79fa-4543-9c36-fb81951ceae8" name="Changes" comment="update api create order">
+      <change afterPath="$PROJECT_DIR$/.idea/modules/product-service.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/quocchung/notificationservice/client/UserClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/quocchung/notificationservice/client/fallback/UserClientFallbackFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/quocchung/notificationservice/config/KafkaConsumerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/quocchung/notificationservice/consumer/OrderEventListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/quocchung/notificationservice/dto/OrderResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/quocchung/notificationservice/event/OrderCreatedEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/quocchung/notificationservice/service/EmailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/quocchung/notificationservice/service/mpl/EmailServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/resources/templates/order-confirmation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/quocchung/productservice/ProductServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/quocchung/productservice/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/quocchung/productservice/model/dto/ProductResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/quocchung/productservice/model/entity/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/quocchung/productservice/repository/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/quocchung/productservice/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/quocchung/productservice/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/test/java/com/quocchung/productservice/ProductServiceApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1a31af73-8db8-48c0-a5d1-84cdebf1d817.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1a31af73-8db8-48c0-a5d1-84cdebf1d817.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/quocchung/orderservice/OrderServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/quocchung/orderservice/OrderServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/quocchung/orderservice/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/quocchung/orderservice/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/quocchung/orderservice/model/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/quocchung/orderservice/model/entity/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-service/product-service/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-service/product-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-service/product-service/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-service/product-service/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-service/product-service/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-service/product-service/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-service/product-service/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-service/product-service/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-service/product-service/src/main/java/com/quocchung/productservice/ProductServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-service/product-service/src/main/java/com/quocchung/productservice/controller/ProductController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-service/product-service/src/main/java/com/quocchung/productservice/model/dto/ProductResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-service/product-service/src/main/java/com/quocchung/productservice/model/entity/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-service/product-service/src/main/java/com/quocchung/productservice/repository/ProductRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-service/product-service/src/main/java/com/quocchung/productservice/service/ProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-service/product-service/src/main/java/com/quocchung/productservice/service/impl/ProductServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-service/product-service/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-service/product-service/src/test/java/com/quocchung/productservice/ProductServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/quocchung/notificationservice/NotificationServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/quocchung/notificationservice/NotificationServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/quocchung/orderservice/config/KafkaProducerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/quocchung/orderservice/config/KafkaProducerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/quocchung/orderservice/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/quocchung/orderservice/service/impl/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,44 +67,35 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ExternalProjectsData">
-    <projectState path="$PROJECT_DIR$/eureka-service">
-      <ProjectState />
-    </projectState>
-    <projectState path="$PROJECT_DIR$/eureka-service/product-service">
-      <ProjectState />
-    </projectState>
-    <projectState path="$PROJECT_DIR$/gateway-service">
-      <ProjectState />
-    </projectState>
     <projectState path="$PROJECT_DIR$/notification-service">
-      <ProjectState />
-    </projectState>
-    <projectState path="$PROJECT_DIR$/order-service">
-      <ProjectState />
-    </projectState>
-    <projectState path="$PROJECT_DIR$/user-service">
       <ProjectState />
     </projectState>
   </component>
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
-        <task path="$PROJECT_DIR$/gateway-service">
-          <activation />
-        </task>
-        <task path="$PROJECT_DIR$/user-service">
-          <activation />
-        </task>
         <projects_view>
           <tree_state>
             <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="eureka-service" type="f1a62948:ProjectNode" />
+              </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="gateway-service" type="f1a62948:ProjectNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="notification-service" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="order-service" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="product-service" type="f1a62948:ProjectNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
@@ -121,185 +113,54 @@
       </state>
     </system>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Quoc-Chung&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Quoc-Chung/microservice_V2.git&quot;,
-    &quot;accountId&quot;: &quot;68488ebd-5777-42fd-bc0c-55eec19191c4&quot;
-  }
-}</component>
-  <component name="KubernetesApiPersistence">{}</component>
-  <component name="KubernetesApiProvider">{
-  &quot;isMigrated&quot;: true
-}</component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 4
-}</component>
-  <component name="ProjectId" id="3EUpxFWdyIiNRnCZDO82XWKcE4d" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Gradle.Build eureka-service.executor": "Run",
-    "Gradle.Build gateway-service.executor": "Run",
+    "Gradle.Build notification-service.executor": "Run",
     "Gradle.Build order-service.executor": "Run",
-    "Gradle.Build product-service.executor": "Run",
     "Gradle.Build user-service.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "Spring Boot.EurekaServiceApplication.executor": "Run",
-    "Spring Boot.GatewayServiceApplication.executor": "Run",
-    "Spring Boot.OrderServiceApplication.executor": "Run",
-    "Spring Boot.ProductServiceApplication.executor": "Run",
-    "Spring Boot.UserServiceApplication.executor": "Run",
+    "Spring Boot.NotificationServiceApplication.executor": "Run",
     "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/KI_HAI_NAM_BA/JAVA_SPRINGBOOT/DU_AN_TU_HOC/holy_dev/gateway-service/build.gradle",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "project.propCompiler",
-    "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
-    ]
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
-  <component name="RunDashboard">
-    <option name="configurationTypes">
-      <set>
-        <option value="KtorApplicationConfigurationType" />
-        <option value="MicronautRunConfigurationType" />
-        <option value="QuarkusRunConfigurationType" />
-        <option value="SpringBootApplicationConfigurationType" />
-      </set>
-    </option>
+  <component name="RunManager">
+    <configuration name="NotificationServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="notification-service.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.quocchung.notificationservice.NotificationServiceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.quocchung.notificationservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.NotificationServiceApplication" />
+      </list>
+    </recent_temporary>
   </component>
-  <component name="RunManager" selected="Spring Boot.UserServiceApplication">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="holy_dev" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="holy_dev" />
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
-    <configuration name="EurekaServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="eureka-service.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.quocchung.eurekaservice.EurekaServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GatewayServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="gateway-service.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.quocchung.gatewayservice.GatewayServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OrderServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <module name="order-service.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.quocchung.orderservice.OrderServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="product-service.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.quocchung.productservice.ProductServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <module name="user-service.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.quocchung.userservice.UserServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.22562.218" />
-        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-IU-243.22562.218" />
-      </set>
-    </attachedChunks>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="64199200-800d-4694-a052-859035383fa4" name="Changes" comment="" />
-      <created>1780243252332</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1780243252332</updated>
-      <workItem from="1780243254309" duration="330000" />
-      <workItem from="1780267004687" duration="2198000" />
-      <workItem from="1780269341074" duration="8623000" />
-      <workItem from="1780283872226" duration="2684000" />
-      <workItem from="1780311561052" duration="9517000" />
-      <workItem from="1780388554792" duration="2920000" />
-      <workItem from="1780392084330" duration="17097000" />
-      <workItem from="1780459781880" duration="3060000" />
-    </task>
-    <task id="LOCAL-00001" summary="build base project javaspring boot">
-      <option name="closed" value="true" />
-      <created>1780390345277</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1780390345277</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="build base project javaspring boot" />
-    <option name="LAST_COMMIT_MESSAGE" value="build base project javaspring boot" />
+    <MESSAGE value="update api create order" />
+    <option name="LAST_COMMIT_MESSAGE" value="update api create order" />
   </component>
 </project>

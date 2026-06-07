@@ -81,19 +81,21 @@ public class OrderServiceImpl implements OrderService {
     orderItemRepository.saveAll(orderItems);
     log.info("TẠO ĐƠN HÀNG THÀNH CÔNG");
 
-//    OrderCreatedEvent event = OrderCreatedEvent.builder()
-//        .orderId(newOrder.getId())
-//        .userId(newOrder.getUserId())
-//        .totalAmount(totalAmount.get())
-//        .orderDate(newOrder.getOrderDate())
-//        .items(orderItems.stream()
-//            .map(item -> OrderCreatedEvent.OrderItemEvent.builder()
-//                .productId(item.getProductId())
-//                .quantity(item.getQuantity())
-//                .build())
-//            .collect(Collectors.toList()))
-//        .build();
-//    kafkaTemplate.send("order-created", String.valueOf(newOrder.getId()), event);
+    OrderCreatedEvent event = OrderCreatedEvent.builder()
+        .orderId(newOrder.getId())
+        .userId(newOrder.getUserId())
+        .totalAmount(totalAmount.get())
+        .orderDate(newOrder.getOrderDate())
+        .items(orderItems.stream()
+            .map(item -> OrderCreatedEvent.OrderItemEvent.builder()
+                .productId(item.getProductId())
+                .quantity(item.getQuantity())
+                .build())
+            .collect(Collectors.toList()))
+        .build();
+    kafkaTemplate.send("order-created", String.valueOf(newOrder.getId()), event);
+    log.info("Đã gửi event Kafka: order-created, orderId={}", newOrder.getId());
+
 
     return OrderCreateResponse.builder()
         .userCreateResponse(userCreateResponse)

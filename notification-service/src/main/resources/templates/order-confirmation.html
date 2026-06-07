@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8"/>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f4; }
+    .container { max-width: 600px; margin: 30px auto; background: white; border-radius: 8px; padding: 30px; }
+    .header { background: #4CAF50; color: white; padding: 20px; border-radius: 8px 8px 0 0; text-align: center; }
+    .order-info { background: #f9f9f9; padding: 15px; border-radius: 6px; margin: 20px 0; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 10px; border: 1px solid #ddd; text-align: left; }
+    th { background: #4CAF50; color: white; }
+    .total { font-size: 18px; font-weight: bold; color: #4CAF50; text-align: right; margin-top: 15px; }
+    .footer { text-align: center; color: #888; margin-top: 20px; font-size: 13px; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h2>Đặt hàng thành công!</h2>
+  </div>
+
+  <p>Cảm ơn bạn đã đặt hàng. Đơn hàng của bạn đã được xác nhận.</p>
+
+  <div class="order-info">
+    <p><strong>Mã đơn hàng:</strong> #<span th:text="${orderId}"></span></p>
+    <p><strong>Ngày đặt:</strong> <span th:text="${#temporals.format(orderDate, 'dd/MM/yyyy HH:mm')}"></span></p>
+  </div>
+
+  <table>
+    <thead>
+    <tr>
+      <th>Sản phẩm ID</th>
+      <th>Số lượng</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="item : ${items}">
+      <td th:text="${item.productId}"></td>
+      <td th:text="${item.quantity}"></td>
+    </tr>
+    </tbody>
+  </table>
+
+  <div class="total">
+    Tổng tiền: <span th:text="${#numbers.formatDecimal(totalAmount, 1, 'COMMA', 0, 'POINT')}"></span> VNĐ
+  </div>
+
+  <div class="footer">
+    <p>Nếu có thắc mắc, vui lòng liên hệ support@yourshop.com</p>
+  </div>
+</div>
+</body>
+</html>

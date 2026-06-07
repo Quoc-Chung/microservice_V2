@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
 @RestController
 @RequestMapping("/api/products")
 @RequiredArgsConstructor
@@ -33,4 +34,5 @@ public class ProductController {
   public List<Product> create(@RequestBody List<Product> product) {
     return productService.createProduct(product);
   }
+
 }

@@ -12,14 +12,6 @@
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
-        <option name="externalProjectPath" value="$PROJECT_DIR$/eureka-service/product-service" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$/eureka-service/product-service" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/gateway-service" />
         <option name="modules">
           <set>
@@ -40,6 +32,14 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/order-service" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/product-service" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/product-service" />
           </set>
         </option>
       </GradleProjectSettings>
