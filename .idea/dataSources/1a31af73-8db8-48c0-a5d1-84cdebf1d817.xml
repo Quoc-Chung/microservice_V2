@@ -1167,7 +1167,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="334" parent="1" name="productdb_holydev">
-      <LastIntrospectionLocalTimestamp>2026-06-03.01:47:46</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2026-06-08.05:23:35</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="335" parent="1" name="profile_chat">
@@ -1231,138 +1231,192 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <schema id="354" parent="1" name="window_fucntion">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <user id="355" parent="1" name="QuocChung">
+    <schema id="355" parent="1" name="review_restaurant">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <user id="356" parent="1" name="QuocChung">
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <user id="356" parent="1" name="mysql.infoschema">
+    <user id="357" parent="1" name="mysql.infoschema">
       <CanLogin>0</CanLogin>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <user id="357" parent="1" name="mysql.session">
+    <user id="358" parent="1" name="mysql.session">
       <CanLogin>0</CanLogin>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <user id="358" parent="1" name="mysql.sys">
+    <user id="359" parent="1" name="mysql.sys">
       <CanLogin>0</CanLogin>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <user id="359" parent="1" name="root">
+    <user id="360" parent="1" name="root">
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <table id="360" parent="330" name="order_items">
+    <table id="361" parent="330" name="order_items">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="361" parent="330" name="orders">
+    <table id="362" parent="330" name="orders">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="362" parent="351" name="users">
+    <table id="363" parent="334" name="products">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <column id="363" parent="360" name="id">
+    <table id="364" parent="351" name="users">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <column id="365" parent="361" name="id">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>bigint|0s</StoredType>
     </column>
-    <column id="364" parent="360" name="product_id">
+    <column id="366" parent="361" name="product_id">
       <Position>2</Position>
       <StoredType>bigint|0s</StoredType>
     </column>
-    <column id="365" parent="360" name="quantity">
+    <column id="367" parent="361" name="quantity">
       <Position>3</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="366" parent="360" name="order_id">
+    <column id="368" parent="361" name="order_id">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>bigint|0s</StoredType>
     </column>
-    <foreign-key id="367" parent="360" name="FKbioxgbv59vetrxe0ejfubep1w">
+    <foreign-key id="369" parent="361" name="FKbioxgbv59vetrxe0ejfubep1w">
       <ColNames>order_id</ColNames>
       <RefColNames>id</RefColNames>
       <RefTableName>orders</RefTableName>
     </foreign-key>
-    <index id="368" parent="360" name="PRIMARY">
+    <index id="370" parent="361" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="369" parent="360" name="FKbioxgbv59vetrxe0ejfubep1w">
+    <index id="371" parent="361" name="FKbioxgbv59vetrxe0ejfubep1w">
       <ColNames>order_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="370" parent="360" name="PRIMARY">
+    <key id="372" parent="361" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="371" parent="361" name="id">
+    <column id="373" parent="362" name="id">
       <AutoIncrement>2</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>bigint|0s</StoredType>
     </column>
-    <column id="372" parent="361" name="price">
+    <column id="374" parent="362" name="price">
       <Position>2</Position>
       <StoredType>double|0s</StoredType>
     </column>
-    <column id="373" parent="361" name="product">
+    <column id="375" parent="362" name="product">
       <Position>3</Position>
       <StoredType>varchar(255)|0s</StoredType>
     </column>
-    <column id="374" parent="361" name="user_id">
+    <column id="376" parent="362" name="user_id">
       <Position>4</Position>
       <StoredType>bigint|0s</StoredType>
     </column>
-    <column id="375" parent="361" name="order_date">
+    <column id="377" parent="362" name="order_date">
       <Position>5</Position>
       <StoredType>datetime(6)|0s</StoredType>
     </column>
-    <column id="376" parent="361" name="status">
+    <column id="378" parent="362" name="status">
       <Position>6</Position>
       <StoredType>enum(&apos;CANCELLED&apos;, &apos;PAID&apos;, &apos;PENDING&apos;, &apos;SHIPPED&apos;)|0e</StoredType>
     </column>
-    <column id="377" parent="361" name="total_amount">
+    <column id="379" parent="362" name="total_amount">
       <Position>7</Position>
       <StoredType>double|0s</StoredType>
     </column>
-    <index id="378" parent="361" name="PRIMARY">
+    <index id="380" parent="362" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="379" parent="361" name="PRIMARY">
+    <key id="381" parent="362" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="380" parent="362" name="id">
+    <column id="382" parent="363" name="id">
+      <AutoIncrement>10</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="383" parent="363" name="code">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <column id="384" parent="363" name="description">
+      <Position>3</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <column id="385" parent="363" name="name">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <column id="386" parent="363" name="price">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>double|0s</StoredType>
+    </column>
+    <column id="387" parent="363" name="stock">
+      <Position>6</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <index id="388" parent="363" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="389" parent="363" name="UK57ivhy5aj3qfmdvl6vxdfjs4p">
+      <ColNames>code</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="390" parent="363" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="391" parent="363" name="UK57ivhy5aj3qfmdvl6vxdfjs4p">
+      <UnderlyingIndexName>UK57ivhy5aj3qfmdvl6vxdfjs4p</UnderlyingIndexName>
+    </key>
+    <column id="392" parent="364" name="id">
       <AutoIncrement>3</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>bigint|0s</StoredType>
     </column>
-    <column id="381" parent="362" name="email">
+    <column id="393" parent="364" name="email">
       <Position>2</Position>
       <StoredType>varchar(255)|0s</StoredType>
     </column>
-    <column id="382" parent="362" name="name">
+    <column id="394" parent="364" name="name">
       <Position>3</Position>
       <StoredType>varchar(255)|0s</StoredType>
     </column>
-    <index id="383" parent="362" name="PRIMARY">
+    <index id="395" parent="364" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="384" parent="362" name="PRIMARY">
+    <key id="396" parent="364" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

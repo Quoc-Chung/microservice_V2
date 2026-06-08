@@ -23,6 +23,7 @@ import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -38,19 +39,22 @@ public class OrderServiceImpl implements OrderService {
 
   @Override
   public OrderCreateResponse createOrder(CreateOrderRequest order) {
-    UserResponse userResponse = userClient.getUserResponse(order.getUserId());
+
+    Long userId = (Long) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+//  UserResponse userResponse = userClient.getUserResponse(order.getUserId());
+    log.info("NGười mua hàng  lúc này : "+ userId);
 
     Order newOrder = Order.builder()
-        .userId(userResponse.getId())
+        .userId(userId)
         .status(OrderStatus.PENDING)
         .orderDate(LocalDateTime.now())
         .build();
 
-    UserCreateResponse userCreateResponse = UserCreateResponse.builder()
-        .userId(userResponse.getId())
-        .name(userResponse.getName())
-        .email(userResponse.getEmail())
-        .build();
+//  UserCreateResponse userCreateResponse = UserCreateResponse.builder()
+//        .userId(userResponse.getId())
+//        .name(userResponse.getName())
+//        .email(userResponse.getEmail())
+//        .build();
 
     List<OrderItem> orderItems = new ArrayList<>();
     List<OrderCreateItem> orderCreateItemList = new ArrayList<>();
@@ -80,25 +84,25 @@ public class OrderServiceImpl implements OrderService {
     orderRepository.save(newOrder);
     orderItemRepository.saveAll(orderItems);
     log.info("TẠO ĐƠN HÀNG THÀNH CÔNG");
-
-    OrderCreatedEvent event = OrderCreatedEvent.builder()
-        .orderId(newOrder.getId())
-        .userId(newOrder.getUserId())
-        .totalAmount(totalAmount.get())
-        .orderDate(newOrder.getOrderDate())
-        .items(orderItems.stream()
-            .map(item -> OrderCreatedEvent.OrderItemEvent.builder()
-                .productId(item.getProductId())
-                .quantity(item.getQuantity())
-                .build())
-            .collect(Collectors.toList()))
-        .build();
-    kafkaTemplate.send("order-created", String.valueOf(newOrder.getId()), event);
-    log.info("Đã gửi event Kafka: order-created, orderId={}", newOrder.getId());
+//
+//    OrderCreatedEvent event = OrderCreatedEvent.builder()
+//        .orderId(newOrder.getId())
+//        .userId(newOrder.getUserId())
+//        .totalAmount(totalAmount.get())
+//        .orderDate(newOrder.getOrderDate())
+//        .items(orderItems.stream()
+//            .map(item -> OrderCreatedEvent.OrderItemEvent.builder()
+//                .productId(item.getProductId())
+//                .quantity(item.getQuantity())
+//                .build())
+//            .collect(Collectors.toList()))
+//        .build();
+//    kafkaTemplate.send("order-created", String.valueOf(newOrder.getId()), event);
+//    log.info("Đã gửi event Kafka: order-created, orderId={}", newOrder.getId());
 
 
     return OrderCreateResponse.builder()
-        .userCreateResponse(userCreateResponse)
+        .userCreateResponse(null)
         .orderCreateItemList(orderCreateItemList)
         .createDate(LocalDateTime.now())
         .totalAmount(totalAmount.get())

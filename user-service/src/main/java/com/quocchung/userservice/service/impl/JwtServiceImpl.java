@@ -1,0 +1,46 @@
+package com.quocchung.userservice.service.impl;
+
+import com.quocchung.userservice.model.entity.User;
+import com.quocchung.userservice.service.JwtService;
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.security.Keys;
+import java.util.Date;
+import org.springframework.stereotype.Service;
+
+@Service
+public class JwtServiceImpl implements  JwtService {
+  private static final String SECRET_KEY = "my-very-long-and-secure-jwt-secret-key-123456";
+
+  @Override
+  public String generateToken(User user) {
+    return Jwts.builder()
+        .setSubject(user.getEmail())
+        .claim("userId", user.getId())
+        .setIssuedAt(new Date())
+        .setExpiration(new Date(System.currentTimeMillis() + 86400000))
+        .signWith(Keys.hmacShaKeyFor(SECRET_KEY.getBytes()), SignatureAlgorithm.HS256)
+        .compact();
+  }
+
+  @Override
+  public Claims extractClaims(String token) {
+    return Jwts.parserBuilder()
+        .setSigningKey(SECRET_KEY.getBytes())
+        .build()
+        .parseClaimsJws(token)
+        .getBody();
+  }
+
+  @Override
+  public boolean isTokenValid(String token) {
+    return extractClaims(token).getExpiration().after(new Date());
+  }
+
+
+  @Override
+  public Long extractUserId(String token) {
+    return extractClaims(token).get("userId", Long.class);
+  }
+}
