@@ -20,8 +20,8 @@ public class SecurityConfig {
       return http
           .csrf(AbstractHttpConfigurer::disable)
           .authorizeHttpRequests(auth -> auth
-              .requestMatchers("/api/orders/**").authenticated()
-              .anyRequest().permitAll())
+              .requestMatchers("/actuator/**").permitAll()
+              .anyRequest().authenticated())
           .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class)
           .build();
     }

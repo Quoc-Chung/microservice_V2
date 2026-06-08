@@ -1,0 +1,43 @@
+Metrics = bảng đồng hồ của ứng dụng, giống như đồng hồ tốc độ/nhiên liệu trên
+xe máy — giúp bạn biết app đang "khỏe" hay "có vấn đề".
+
+
+http://localhost:8082/actuator/prometheus
+
+Là Spring Boot app (order-service) của bạn
+Xuất ra raw metrics dạng text
+Prometheus tự động vào đây mỗi 10s để lấy data
+Bạn không cần vào tay, trừ khi muốn kiểm tra app có xuất metrics không
+
+=> Check Metrix của một module
+
+
+
+
+http://localhost:9090/
+
+Là Prometheus
+Thu thập và lưu trữ toàn bộ metrics từ 3 service của bạn
+Có thể query thử metrics ở đây
+Vào Status → Targets để kiểm tra 3 service UP hay DOWN
+
+
+http://localhost:3000/
+
+http://localhost:3000
+
+Là Grafana
+Lấy data từ Prometheus rồi hiển thị thành biểu đồ đẹp
+Đây là nơi bạn ngồi xem hàng ngày
+
+
+App (8081, 8082, 8083)
+        ↓ xuất metrics
+   Prometheus (9090)
+        ↓ lưu & xử lý
+     Grafana (3000)
+        ↓ hiển thị biểu đồ đẹp
+        👀 Bạn ngồi xem
+
+
+
