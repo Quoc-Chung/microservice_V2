@@ -54,3 +54,7 @@ management:
     metrics:
       export:
         enabled: true
+
+grpc:
+  server:
+    port: 9099
