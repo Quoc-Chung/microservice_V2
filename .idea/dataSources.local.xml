@@ -16,6 +16,7 @@
             <name qname="orderdb_holydev" />
             <name qname="productdb_holydev" />
             <name qname="userdb_holydev" />
+            <name qname="inventory_holydev" />
           </node>
         </introspection-scope>
       </schema-mapping>

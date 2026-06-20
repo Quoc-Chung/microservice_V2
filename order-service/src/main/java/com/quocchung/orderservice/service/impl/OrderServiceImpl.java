@@ -6,8 +6,6 @@ import com.quocchung.orderservice.event.OrderCreatedEvent;
 import com.quocchung.orderservice.model.dto.CreateOrderRequest;
 import com.quocchung.orderservice.model.dto.OrderCreateResponse;
 import com.quocchung.orderservice.model.dto.OrderCreateResponse.OrderCreateItem;
-import com.quocchung.orderservice.model.dto.OrderCreateResponse.UserCreateResponse;
-import com.quocchung.orderservice.model.dto.OrderResponse.UserResponse;
 import com.quocchung.orderservice.model.dto.ProductResponse;
 import com.quocchung.orderservice.model.entity.Order;
 import com.quocchung.orderservice.model.entity.OrderItem;
@@ -19,7 +17,6 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -41,20 +38,13 @@ public class OrderServiceImpl implements OrderService {
   public OrderCreateResponse createOrder(CreateOrderRequest order) {
 
     Long userId = (Long) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-//  UserResponse userResponse = userClient.getUserResponse(order.getUserId());
-    log.info("NGười mua hàng  lúc này : "+ userId);
+    log.info("NGƯỜI MUA HÀNG LÚC NÀY: "+ userId);
 
     Order newOrder = Order.builder()
         .userId(userId)
         .status(OrderStatus.PENDING)
         .orderDate(LocalDateTime.now())
         .build();
-
-//  UserCreateResponse userCreateResponse = UserCreateResponse.builder()
-//        .userId(userResponse.getId())
-//        .name(userResponse.getName())
-//        .email(userResponse.getEmail())
-//        .build();
 
     List<OrderItem> orderItems = new ArrayList<>();
     List<OrderCreateItem> orderCreateItemList = new ArrayList<>();
@@ -84,7 +74,8 @@ public class OrderServiceImpl implements OrderService {
     orderRepository.save(newOrder);
     orderItemRepository.saveAll(orderItems);
     log.info("TẠO ĐƠN HÀNG THÀNH CÔNG");
-//
+
+
 //    OrderCreatedEvent event = OrderCreatedEvent.builder()
 //        .orderId(newOrder.getId())
 //        .userId(newOrder.getUserId())

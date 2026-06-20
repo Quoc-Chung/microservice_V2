@@ -27,7 +27,6 @@ public class ProductServiceImpl implements ProductService {
         .code(product.getCode())
         .name(product.getName())
         .price(product.getPrice())
-        .stock(product.getStock())
         .description(product.getDescription())
         .build();
   }

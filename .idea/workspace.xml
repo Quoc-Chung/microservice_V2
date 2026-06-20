@@ -4,20 +4,52 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c94e8f2a-79fa-4543-9c36-fb81951ceae8" name="Changes" comment="add process">
-      <change afterPath="$PROJECT_DIR$/gRPC" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/quocchung/orderservice/grpc/GrpcUserClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/quocchung/orderservice/model/dto/UserDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/proto/user.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/quocchung/userservice/grpc/UserGrpcServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/proto/user.proto" afterDir="false" />
+    <list default="true" id="c94e8f2a-79fa-4543-9c36-fb81951ceae8" name="Changes" comment="add gRPC communication between services">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/1a31af73-8db8-48c0-a5d1-84cdebf1d817/storage_v2/_src_/schema/inventory_holydev.3hKrvA.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/1a31af73-8db8-48c0-a5d1-84cdebf1d817/storage_v2/_src_/schema/productdb_holydev.L3LQXQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/quocchung/inventory_service/InventoryServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/quocchung/inventory_service/controller/InventoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/quocchung/inventory_service/model/dto/InventoryDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/quocchung/inventory_service/model/entity/Inventory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/quocchung/inventory_service/repository/InventoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/quocchung/inventory_service/service/Impl/InventoryServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/quocchung/inventory_service/service/InventoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/test/java/com/quocchung/inventory_service/InventoryServiceApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/quocchung/payment_service/PaymentServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/quocchung/payment_service/model/entity/Payment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/quocchung/payment_service/utils/enums/PaymentMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/quocchung/payment_service/utils/enums/PaymentStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/test/java/com/quocchung/payment_service/PaymentServiceApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1a31af73-8db8-48c0-a5d1-84cdebf1d817.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1a31af73-8db8-48c0-a5d1-84cdebf1d817.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/quocchung/orderservice/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/quocchung/orderservice/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/quocchung/orderservice/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/quocchung/orderservice/service/impl/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/quocchung/productservice/model/dto/ProductResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/quocchung/productservice/model/dto/ProductResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/quocchung/productservice/model/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/quocchung/productservice/model/entity/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/quocchung/productservice/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/quocchung/productservice/service/impl/ProductServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,10 +60,16 @@
     <projectState path="$PROJECT_DIR$/gateway-service">
       <ProjectState />
     </projectState>
+    <projectState path="$PROJECT_DIR$/inventory-service">
+      <ProjectState />
+    </projectState>
     <projectState path="$PROJECT_DIR$/notification-service">
       <ProjectState />
     </projectState>
     <projectState path="$PROJECT_DIR$/order-service">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/payment-service">
       <ProjectState />
     </projectState>
     <projectState path="$PROJECT_DIR$/product-service">
@@ -115,6 +153,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Exception" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -153,8 +192,10 @@
   "keyToString": {
     "Gradle.Build eureka-service.executor": "Run",
     "Gradle.Build gateway-service.executor": "Run",
+    "Gradle.Build inventory-service.executor": "Run",
     "Gradle.Build notification-service.executor": "Run",
     "Gradle.Build order-service.executor": "Run",
+    "Gradle.Build payment-service.executor": "Run",
     "Gradle.Build product-service.executor": "Run",
     "Gradle.Build user-service.executor": "Run",
     "Gradle.order-service [generateProto].executor": "Run",
@@ -168,20 +209,22 @@
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "Spring Boot.EurekaServiceApplication.executor": "Run",
     "Spring Boot.GatewayServiceApplication.executor": "Run",
+    "Spring Boot.InventoryServiceApplication.executor": "Run",
     "Spring Boot.NotificationServiceApplication.executor": "Run",
     "Spring Boot.OrderServiceApplication.executor": "Run",
+    "Spring Boot.PaymentServiceApplication.executor": "Run",
     "Spring Boot.ProductServiceApplication.executor": "Run",
     "Spring Boot.UserServiceApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/KI_HAI_NAM_BA/JAVA_SPRINGBOOT/DU_AN_TU_HOC/holy_dev/order-service/src/main/proto",
+    "last_opened_file_path": "D:/KI_HAI_NAM_BA/JAVA_SPRINGBOOT/DU_AN_TU_HOC/holy_dev/payment-service/settings.gradle",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "run.configurations.included.in.services": "true",
     "vue.rearranger.settings.migration": "true"
   }
@@ -201,7 +244,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.order-service [generateProto]">
+  <component name="RunManager" selected="Spring Boot.EurekaServiceApplication">
     <configuration name="order-service [generateProto]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -246,15 +289,24 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="GatewayServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="gateway-service.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.quocchung.gatewayservice.GatewayServiceApplication" />
+    <configuration name="EurekaServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="eureka-service.main" />
+      <option name="SHORTEN_COMMAND_LINE" value="ARGS_FILE" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.quocchung.eurekaservice.EurekaServiceApplication" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.quocchung.gatewayservice.*" />
+          <option name="PATTERN" value="com.quocchung.eurekaservice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InventoryServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="inventory-service.main" />
+      <option name="SHORTEN_COMMAND_LINE" value="ARGS_FILE" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.quocchung.inventory_service.InventoryServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -276,6 +328,14 @@
       <module name="order-service.main" />
       <option name="SHORTEN_COMMAND_LINE" value="ARGS_FILE" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.quocchung.orderservice.OrderServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PaymentServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="payment-service.main" />
+      <option name="SHORTEN_COMMAND_LINE" value="ARGS_FILE" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.quocchung.payment_service.PaymentServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -310,19 +370,21 @@
     <list>
       <item itemvalue="Gradle.order-service [generateProto]" />
       <item itemvalue="Gradle.user-service [generateProto]" />
-      <item itemvalue="Spring Boot.OrderServiceApplication" />
+      <item itemvalue="Spring Boot.InventoryServiceApplication" />
       <item itemvalue="Spring Boot.UserServiceApplication" />
+      <item itemvalue="Spring Boot.PaymentServiceApplication" />
+      <item itemvalue="Spring Boot.OrderServiceApplication" />
+      <item itemvalue="Spring Boot.EurekaServiceApplication" />
       <item itemvalue="Spring Boot.ProductServiceApplication" />
-      <item itemvalue="Spring Boot.GatewayServiceApplication" />
       <item itemvalue="Spring Boot.NotificationServiceApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.order-service [generateProto]" />
-        <item itemvalue="Gradle.user-service [generateProto]" />
         <item itemvalue="Spring Boot.NotificationServiceApplication" />
         <item itemvalue="Spring Boot.ProductServiceApplication" />
-        <item itemvalue="Spring Boot.GatewayServiceApplication" />
+        <item itemvalue="Spring Boot.EurekaServiceApplication" />
+        <item itemvalue="Gradle.order-service [generateProto]" />
+        <item itemvalue="Gradle.user-service [generateProto]" />
       </list>
     </recent_temporary>
   </component>
@@ -360,6 +422,7 @@
       <updated>1780892813677</updated>
       <workItem from="1780892816146" duration="5425000" />
       <workItem from="1780910955101" duration="12373000" />
+      <workItem from="1781943158864" duration="1548000" />
     </task>
     <task id="LOCAL-00003" summary="add monitoring by promethod and grafana">
       <option name="closed" value="true" />

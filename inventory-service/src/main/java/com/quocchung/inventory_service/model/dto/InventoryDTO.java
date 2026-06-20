@@ -1,4 +1,4 @@
-package com.quocchung.productservice.model.dto;
+package com.quocchung.inventory_service.model.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,12 +9,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class ProductResponse {
+public class InventoryDTO {
+  private Long id;
   private Long productId;
-  private String code;
-  private String name;
-
-  private String description;
-
-  private Double price;
+  private String productCode;
+  private Integer availableQty;
+  private Integer reservedQty;
 }
